@@ -100,18 +100,15 @@ $(function() {
     var myChart2 = new Chart(ctx2, {
         type: 'doughnut',
         data: {
-            labels: ["M", "T", "W", "T", "F", "S", "S"],
+            labels: ["Sponsorships", "Programs", "Salaries", "Events"],
             datasets: [{
                 backgroundColor: [
-                    "#2ecc71",
-                    "#3498db",
-                    "#95a5a6",
-                    "#9b59b6",
-                    "#f1c40f",
-                    "#e74c3c",
-                    "#34495e"
+                    "#44AFC4",
+                    "#365D93",
+                    "#9BBC53",
+                    "#8061A4"
                 ],
-                data: [12, 19, 3, 17, 28, 24, 7]
+                data: [30, 19, 60, 17]
             }]
         }
     });
