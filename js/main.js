@@ -61,9 +61,44 @@ $(function() {
         }
     });
 
-    var ctx1 = document.getElementById("myChart2").getContext('2d');
-    var myChart1 = new Chart(ctx1, {
-        type: 'polarArea',
+    // var ctx1 = document.getElementById("myChart2").getContext('2d');
+    // var myChart1 = new Chart(ctx1, {
+    //     type: 'polarArea',
+    //     data: {
+    //         labels: ["M", "T", "W", "T", "F", "S", "S"],
+    //         datasets: [{
+    //             backgroundColor: [
+    //                 "#2ecc71",
+    //                 "#3498db",
+    //                 "#95a5a6",
+    //                 "#9b59b6",
+    //                 "#f1c40f",
+    //                 "#e74c3c",
+    //                 "#34495e"
+    //             ],
+    //             data: [12, 19, 3, 17, 28, 24, 7]
+    //         }]
+    //     }
+    // });
+    // var ctx2 = document.getElementById("myChart3").getContext('2d');
+    // var myChart2 = new Chart(ctx2, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ["M", "T", "W", "R", "F", "S", "S"],
+    //         datasets: [{
+    //             label: 'Training',
+    //             data: [12, 19, 3, 17, 28, 24, 7],
+    //             backgroundColor: "rgba(193, 54, 144,0.5)"
+    //         }, {
+    //             label: 'Event',
+    //             data: [30, 29, 5, 5, 20, 3, 10],
+    //             backgroundColor: "rgba(115, 224, 224,1)"
+    //         }]
+    //     }
+    // });
+    var ctx2 = document.getElementById("myChart3").getContext('2d');
+    var myChart2 = new Chart(ctx2, {
+        type: 'doughnut',
         data: {
             labels: ["M", "T", "W", "T", "F", "S", "S"],
             datasets: [{
@@ -77,22 +112,6 @@ $(function() {
                     "#34495e"
                 ],
                 data: [12, 19, 3, 17, 28, 24, 7]
-            }]
-        }
-    });
-    var ctx2 = document.getElementById("myChart3").getContext('2d');
-    var myChart2 = new Chart(ctx2, {
-        type: 'bar',
-        data: {
-            labels: ["M", "T", "W", "R", "F", "S", "S"],
-            datasets: [{
-                label: 'Training',
-                data: [12, 19, 3, 17, 28, 24, 7],
-                backgroundColor: "rgba(193, 54, 144,0.5)"
-            }, {
-                label: 'Event',
-                data: [30, 29, 5, 5, 20, 3, 10],
-                backgroundColor: "rgba(115, 224, 224,1)"
             }]
         }
     });
