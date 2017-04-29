@@ -14,6 +14,10 @@ $(function() {
         $form.removeClass('active');
     }
 
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii"
+    });
+
     // Show Search if form is not active // event.preventDefault() is important, this prevents the form from submitting
     $(document).on('click', '.navbar-collapse form[role="search"]:not(.active) button[type="submit"]', function(event) {
         event.preventDefault();
@@ -32,7 +36,7 @@ $(function() {
         $('#showSearchTerm').text($input.val());
         closeSearch()
     });
-    // Chart.js 
+    // Chart.js
     var ctx = document.getElementById('myChart1').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'line',
