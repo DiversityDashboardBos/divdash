@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>Web Admin Control</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!--mobile version and Logo-->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">LOGO</a>
+            </div>
+            <!--/.mobile version Logo-->
+            <!--descktop navigation bar-->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--Add &nbsp;&nbsp; for spacing between the icons and letters-->
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Main Panel</a></li>
+                    <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;User Panel</a></li>
+                    <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Contain Panel</a></li>
+
+                </ul>
+                <!--Search bar-->
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+							<button type="reset" class="btn btn-default">
+								<span class="glyphicon glyphicon-remove">
+									<span class="sr-only">Close</span>
+                        </span>
+                        </button>
+                        <button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search">
+									<span class="sr-only">Search</span>
+								</span>
+							</button>
+                        </span>
+                    </div>
+                </form>
+                <!--/.Search bar-->
+                <!--DropDown bar-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="index.html"><span class="glyphicon glyphicon-screenshot"></span>&nbsp;&nbsp;Main Panel</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;User Panel</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Settings</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;Budget</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;My favour</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#bbs"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;:Log Out</a></li>
+                </ul>
+                <!--/.DropDown bar-->
+            </div>
+            <!--/.descktop navigation bar-->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Copyright&nbsp;©&nbsp;2017&nbsp;&nbsp;www.XXXXX.com&nbsp;&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer-->
+
+    <!--Load jQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!--Load Chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!--Load Bootstrap.js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Load Main js-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
