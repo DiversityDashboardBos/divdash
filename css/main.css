@@ -183,6 +183,21 @@ body {
 /***Event_Summary Left_navrbar*/
 
 
+/**Event_Summary First section **/
+
+#firstS .btn {
+    background-color: #44AFC4;
+    border: 0 none;
+    outline: 0 none;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+}
+
+
+/**Event_Summary First section **/
+
+
 /*footer*/
 
 footer {
