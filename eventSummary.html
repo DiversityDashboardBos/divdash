@@ -82,11 +82,11 @@
     <!--/.Navbar-->
 
     <!--Main Contain Area-->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <!--Left Navbar-->
-            <div class="col-sm-2" id="leftmenu">
-                <ul id="sidebar" class="nav nav-stacked affix">
+            <!--Left sidebar-->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul id="sidebar" class="nav nav-sidebar">
                     <li><a href="#">Kari's Dashboard</a></li>
                     <li><a href="#">Thing 1</a></li>
                     <li><a href="#">Thing 2</a></li>
@@ -96,10 +96,75 @@
                 </ul>
 
             </div>
-            <!--/. Left Navbar-->
+            <!--/. Left sidebar-->
             <!--First Line-->
-            <!--/. First Line-->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">My Customized Report</h1>
 
+                <div class="row placeholders">
+                    <div class="col-xs-6 col-sm-2 placeholder">
+
+                        <button type="button" class="btn btn-secondary btn-lg">2017 Budget</button>
+
+                    </div>
+                    <div class="col-xs-6 col-sm-2 placeholder">
+
+                        <button type="button" class="btn btn-secondary btn-lg">Leadership</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 placeholder">
+                        <button type="button" class="btn btn-secondary btn-lg">Goals</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 placeholder">
+                        <button type="button" class="btn btn-secondary btn-lg">Diversity Council</button>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-2 placeholder">
+                        <button type="button" class="btn btn-secondary btn-lg">Diversity Events</button>
+                    </div>
+
+
+                    <div class="col-xs-6 col-sm-2 placeholder">
+                        <button type="button" class="btn btn-secondary btn-lg">Training</button>
+                    </div>
+                </div>
+                <!--/. First Line-->
+                <!--Second part -->
+                <h2 class="sub-header">Event Summary</h2>
+
+                <!--/. Second part -->
+                <div class="col-md-12">
+                    <!--Load Line Chart Chart.js for Summery-->
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <span class="glyphicon glyphicon-list"></span>  Event Summary
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <!--Chart.js request the convas-->
+                                <canvas id="myChart1" class="col-md-12"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Load Chart.js for Summery-->
+                </div>
+                <!--Load Bar Chart Chart.js for Summery-->
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <span class="glyphicon glyphicon-leaf"></span> Improvment
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <!--Chart.js request the convas-->
+                            <canvas id="myChart3" class="col-md-12"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Load Bar Chart.js for Summery-->
+            </div>
         </div>
 
     </div>
