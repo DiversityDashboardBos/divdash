@@ -160,6 +160,41 @@ body {
 
 /*Event_Summary Left_navrbar*/
 
+.leftmenu {
+    width: 187px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.leftmenu dl dt {
+    width: 150px;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 20px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    background: #009beb right 12px no-repeat;
+    cursor: pointer;
+}
+
+.leftmenu dl ul li {
+    width: 150px;
+    float: right;
+    height: 26px;
+    line-height: 26px;
+    text-indent: 10px;
+}
+
+.leftmenu dl ul li a:hover {
+    color: #009beb;
+}
+
 
 /***Event_Summary Left_navrbar*/
 
