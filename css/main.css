@@ -185,6 +185,10 @@ body {
     cursor: pointer;
 }
 
+#sidebar>a {
+    font-weight: bold;
+}
+
 
 /***Event_Summary Left_navrbar*/
 
