@@ -88,18 +88,21 @@ body {
 .home {
     display: table;
     width: 100%;
-    height: auto;
     padding: 100px 0;
-    text-align: center;
     color: white;
-    background: url(../images/headimg_draf.jpg) no-repeat bottom center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
     margin-top: -20px;
+    background-image:url("http://i1064.photobucket.com/albums/u367/wjbritton1/header_zpsfzv7vix4.png");
+    background-size: cover;
+    text-align:center;
+    height:500px;
 }
+
+
+
 
 .home .home-body {
     display: table-cell;
