@@ -33,33 +33,33 @@ $(function() {
         closeSearch()
     });
     // Chart.js
-    var ctx = document.getElementById('myChart1').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-            datasets: [{
-                    label: 'Event1',
-                    // Y axis
+    // var ctx = document.getElementById('myChart1').getContext('2d');
+    // var myChart = new Chart(ctx, {
+    //     type: 'line',
+    //     data: {
+    //         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    //         datasets: [{
+    //                 label: 'Event1',
+    //                 // Y axis
 
-                    backgroundColor: "rgba(153,255,51,0.6)",
-                    pointStrokeColor: "red",
-                    data: [114, 255, 455, 414, 599, 605, 500]
+    //                 backgroundColor: "rgba(153,255,51,0.6)",
+    //                 pointStrokeColor: "red",
+    //                 data: [114, 255, 455, 414, 599, 605, 500]
 
-                }, {
-                    label: 'Event2',
-                    backgroundColor: "rgba(255,153,0,0.6)",
-                    data: [300, 555, 655, 714, 899, 905, 1000]
-                },
-                {
-                    label: 'Event3',
-                    backgroundColor: "rgb(219, 116, 224)",
-                    data: [314, 455, 755, 814, 999, 905, 1000]
+    //             }, {
+    //                 label: 'Event2',
+    //                 backgroundColor: "rgba(255,153,0,0.6)",
+    //                 data: [300, 555, 655, 714, 899, 905, 1000]
+    //             },
+    //             {
+    //                 label: 'Event3',
+    //                 backgroundColor: "rgb(219, 116, 224)",
+    //                 data: [314, 455, 755, 814, 999, 905, 1000]
 
-                }
-            ]
-        }
-    });
+    //             }
+    //         ]
+    //     }
+    // });
 
     // var ctx1 = document.getElementById("myChart2").getContext('2d');
     // var myChart1 = new Chart(ctx1, {
@@ -80,23 +80,23 @@ $(function() {
     //         }]
     //     }
     // });
-    // var ctx2 = document.getElementById("myChart3").getContext('2d');
-    // var myChart2 = new Chart(ctx2, {
-    //     type: 'bar',
-    //     data: {
-    //         labels: ["M", "T", "W", "R", "F", "S", "S"],
-    //         datasets: [{
-    //             label: 'Training',
-    //             data: [12, 19, 3, 17, 28, 24, 7],
-    //             backgroundColor: "rgba(193, 54, 144,0.5)"
-    //         }, {
-    //             label: 'Event',
-    //             data: [30, 29, 5, 5, 20, 3, 10],
-    //             backgroundColor: "rgba(115, 224, 224,1)"
-    //         }]
-    //     }
-    // });
-    var ctx2 = document.getElementById("myChart3").getContext('2d');
+    var ctx1 = document.getElementById("myChart1").getContext('2d');
+    var myChart1 = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ["Events", "New Hires", "Trainings", "Satisfaction", "Meetings"],
+            datasets: [{
+                label: 'Actual',
+                data: [12, 19, 3, 7, 15, 20, 7],
+                backgroundColor: "#44AFC4"
+            }, {
+                label: 'Goal',
+                data: [30, 29, 5, 15, 20, 30, 10],
+                backgroundColor: "#9BBC53"
+            }]
+        }
+    });
+    var ctx2 = document.getElementById("myChart2").getContext('2d');
     var myChart2 = new Chart(ctx2, {
         type: 'doughnut',
         data: {
