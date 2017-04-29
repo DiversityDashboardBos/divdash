@@ -80,6 +80,56 @@ body {
 /*Navbar*/
 
 
+/*Home Page*/
+
+
+/*home*/
+
+.home {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    background: url(../images/headimg_draf.jpg) no-repeat bottom center scroll;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.home .home-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.home .home-body h1 {
+    font-size: 40px;
+    animation: type 4s steps(60, end);
+}
+
+.home .home-body h1:nth-child(2) {
+    animation: type2 8s steps(60, end);
+}
+
+.home .home-body .intro-text {
+    font-size: 20px;
+}
+
+.var-highlight {
+    color: rgb(64, 210, 177);
+}
+
+.string-highlight {
+    color: rgba(251, 5, 50, 0.8);
+}
+
+
+/*Home Page*/
+
+
 /*padding*/
 
 .pad0 {
