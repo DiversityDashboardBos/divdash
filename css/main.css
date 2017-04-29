@@ -222,3 +222,18 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+.fa {
+    color:black;
+    padding:10px;
+  }
+.social {
+  background-color:white;
+  text-align:center;
+  font-family:'Microsoft YaHei', san-serif;
+  border-radius:10%;
+}
+.phone {
+  text-align:center;
+  font-size:21px;
+}
