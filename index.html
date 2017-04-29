@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>Web Admin Control</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!--mobile version and Logo-->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">LOGO</a>
+            </div>
+            <!--/.mobile version Logo-->
+            <!--descktop navigation bar-->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--Add &nbsp;&nbsp; for spacing between the icons and letters-->
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Main Panel</a></li>
+                    <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;User Panel</a></li>
+                    <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Contain Panel</a></li>
+
+                </ul>
+                <!--Search bar-->
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+							<button type="reset" class="btn btn-default">
+								<span class="glyphicon glyphicon-remove">
+									<span class="sr-only">Close</span>
+                        </span>
+                        </button>
+                        <button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search">
+									<span class="sr-only">Search</span>
+								</span>
+							</button>
+                        </span>
+                    </div>
+                </form>
+                <!--/.Search bar-->
+                <!--DropDown bar-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="index.html"><span class="glyphicon glyphicon-screenshot"></span>&nbsp;&nbsp;Main Panel</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;User Panel</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Settings</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;Budget</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;My favour</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#bbs"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;:Log Out</a></li>
+                </ul>
+                <!--/.DropDown bar-->
+            </div>
+            <!--/.descktop navigation bar-->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Main Contain Area-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--Updates, Info-->
+                <div class="alert alert-info alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4>Note！Here is today's updates</h4>
+                    <p>
+                        <button type="button" class="btn btn-info">Read Now</button>
+                        <button type="button" class="btn btn-default" data-dismiss="alert">Save Later</button>
+                    </p>
+                </div>
+                <!--/.Updates, Info-->
+                <!--Main Control Panel Summery-->
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <span class="glyphicon glyphicon-list"></span>  Control Panel Summery
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Summary</th>
+                                            <th>Today</th>
+                                            <th>Yesterday</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Members</th>
+                                            <td>200</td>
+                                            <td>400</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Events</th>
+                                            <td>4100</td>
+                                            <td>5112</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Budget</th>
+                                            <td>1540</td>
+                                            <td>4511</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Contact</th>
+                                            <td>150</td>
+                                            <td>110</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--/.Main Control Panel Summery-->
+
+                    <!--Load Line Chart Chart.js for Summery-->
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <span class="glyphicon glyphicon-list"></span>  Event Summary
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <!--Chart.js request the convas-->
+                                <canvas id="myChart1" class="col-md-12"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Load Chart.js for Summery-->
+                </div>
+                <!--Load Polar Chart Chart.js for Summery-->
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <span class="glyphicon glyphicon-leaf"></span>  Training Summary
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <!--Chart.js request the convas-->
+                            <canvas id="myChart2" class="col-md-12"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Load Polar Chart.js for Summery-->
+
+                <!--Upcoming Events Widge-->
+                <div class="col-md-6">
+                    <!-- Fluid width widget -->
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <span class="glyphicon glyphicon-calendar"></span>  Calendar Events
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <div class="panel panel-info text-center date">
+                                            <div class="panel-heading month">
+                                                <span class="panel-title strong">
+                                            May
+                                        </span>
+                                            </div>
+                                            <div class="panel-body day text-danger">
+                                                01
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            Pulvinar Mauris Eu
+                                        </h4>
+                                        <p>
+                                            Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <div class="media-left">
+                                        <div class="panel panel-info text-center date">
+                                            <div class="panel-heading month">
+                                                <span class="panel-title strong">
+                                            Jun
+                                        </span>
+                                            </div>
+                                            <div class="panel-body text-danger day">
+                                                16
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            Aenean Consectetur Ultricies
+                                        </h4>
+                                        <p>
+                                            Curabitur vel malesuada tortor, sit amet ultricies mauris. Aenean consectetur ultricies luctus.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <div class="media-left">
+                                        <div class="panel panel-info text-center date">
+                                            <div class="panel-heading month">
+                                                <span class="panel-title strong all-caps">
+                                            July
+                                        </span>
+                                            </div>
+                                            <div class="panel-body text-danger day">
+                                                8
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            Praesent Tincidunt
+                                        </h4>
+                                        <p>
+                                            Sed convallis dignissim magna et dignissim. Praesent tincidunt sapien eu gravida dignissim.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-default btn-block">More Events »</a>
+                        </div>
+                    </div>
+                    <!-- End fluid width widget -->
+                </div>
+                <!--/.Upcoming Events Widge-->
+                <!--Last Part-->
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Making Progress</div>
+                        <div class="panel-body">
+                            <!--Load Bar Chart Chart.js for Summery-->
+                            <div class="col-md-6">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            <span class="glyphicon glyphicon-leaf"></span> Improvment
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <!--Chart.js request the convas-->
+                                        <canvas id="myChart3" class="col-md-12"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Load Bar Chart.js for Summery-->
+                            <!--Message Board-->
+                            <div class="col-md-6">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            <span class="glyphicon glyphicon-leaf"></span>Message
+                                        </h3>
+                                    </div>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label for="text1">Leave a Message</label>
+                                            <textarea class="form-control" id="text1" rows="5" cols="10" placeholder="Message"></textarea>
+                                            <button type="submit" class="btn btn-default mar_t15">Contact</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <!--/.Message Board-->
+                        </div>
+                    </div>
+                </div>
+                <!--Last Part-->
+
+            </div>
+        </div>
+    </div>
+    <!--/.Main Contain Area-->
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Copyright&nbsp;©&nbsp;2017&nbsp;&nbsp;www.XXXXX.com&nbsp;&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer-->
+
+    <!--Load jQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!--Load Chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!--Load Bootstrap.js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Load Main js-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
