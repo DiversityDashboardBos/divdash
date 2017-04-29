@@ -157,6 +157,10 @@ body {
     border-top: none;
 }
 
+.about-description {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 
 /*footer*/
 
