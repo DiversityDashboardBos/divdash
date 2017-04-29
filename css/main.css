@@ -206,6 +206,11 @@ body {
 
 /****Event_Summary Second section**/
 
+#myChart1,
+#myChart3 {
+    height: 600px;
+}
+
 
 /****Event_Summary Second section**/
 
